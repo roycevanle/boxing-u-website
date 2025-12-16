@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-bg: #1A1A1A;        /* Darkest background color (Black/Dark Gray) */
+  --color-secondary-bg: #2C2C2C;      /* Secondary background for sections (Lighter Dark Gray) */
+  --color-secondary-text: #A0A0A0;    /* Muted text color (Medium Gray) */
+  --color-accent-red: #E33A3A;        /* Vibrant action color (Red) */
+  --color-text-white: #F0F0F0;        /* Main text color (Off-White) */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Apply the specific Slab Serif font to the logo */
+#app-logo {
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Style for the mobile menu transition */
+.mobile-menu {
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
+}
+
+.mobile-menu.active {
+    transform: translateY(0);
+}
