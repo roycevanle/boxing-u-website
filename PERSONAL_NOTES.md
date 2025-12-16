@@ -10,6 +10,19 @@ Things to consider when using a .gitignore file:
     "files.associations": {
       "*.css": "tailwindcss"
     }
+## VSCode
+1. Shortcut to auto-align is SHIFT+ALT+F
 
 # Things I have to do:
 1. Put the pictures where they gotta be
+
+
+# Other Boxing Gyms' Websites:
+https://www.levelgroundmma.org
+https://www.pacificmuaythai.com
+https://www.seattleboxinggym.com/
+
+# Resources
+To look for designs
+1. https://www.reddit.com/r/web_design/comments/12q1iuo/what_are_some_go_to_websites_to_look_at_for_good/
+
