@@ -13,50 +13,72 @@
 
     <!-- Lucide Icons for the UI elements -->
     <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- Google Font for Slab Serif Style (using Roboto Slab as a robust alternative) -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body class="bg-primary-bg text-text-white font-sans">
     <!--Header content container -->
     <header>
         <!-- Hero section -->
-        <section class="relative flex min-h-[500px] md:min-h-screen p-8 bg-secondary-bg">
-            <!-- Right Side -->
-            <!--ATT: I have a feeling mr will fuck up img, but we'll see-->
-            <div class="relative flex-1 flex-col items-center justify-center min-h-[500px] md:min-h-9/10 p-3 bg-blue-400 mx-2 mt-5 mb-5 rounded-[2vw] shadow-lg">
-                <div class="relative flex"> <!--Should be justify-content:center to distribute text evenly-->
-                    <h1 id="app-logo" class="text-xl md:text-2xl font-bold text-accent-red tracking-wider uppercase">
+        <section class="relative flex min-h-lvh min-w-lvw p-4 bg-secondary-bg">
+            <!-- Left Side -->
+            <div class="flex flex-col justify-between min-h-125 md:h-[75vh] p-3 mx-[5vw] my-[5vh] bg-amber-50">
+                <!--bg is only for testing-->
+                <div class="relative"> <!--Should be justify-content:center to distribute text evenly-->
+                    <h1 class="navbar-logo text-xl md:text-3xl font-bold text-accent-red tracking-wider uppercase">
                         Boxing University
                     </h1>
                 </div>
-                <div class="relative p-6 rounded-lg bg-primary-bg my-[30vw]">
+                <!-- Call To Action -->
+                <div class="relative">
                     <h2 class="text-2xl md:text-4xl font-extrabold leading-tight">
                         Your Journey
                     </h2>
                     <h2 class="text-2xl md:text-4xl mb-10 md:mb-15 font-extrabold leading-tight">
                         Beings in the Ring
                     </h2>
-                    <!-- <h2 class="text-3xl md:text-4xl font-extrabold mb-6 leading-tight">
-                        You're Invited
-                    </h2> -->
-                    <p class="text-sm md:text-base text-secondary-text mb-6">
-                        Welcome to Boxing University. We're dedicated to helping you achieve your fitness goals through the discipline and power of boxing. Whether you're a beginner or a seasoned pro, our certified trainers are here to guide you every step of the way
+                    <p class="text-sm md:text-xl text-secondary-text mb-6">
+                        Welcome to Boxing University. We're dedicated to helping you achieve your fitness goals through
+                        the discipline and power of boxing. Whether you're a beginner or a seasoned pro, our certified
+                        trainers are here to guide you every step of the way
                     </p>
                 </div>
+                <!-- Statistics -->
                 <div class="relative flex"> <!--Should be justify-content:center to distribute text evenly-->
-                    <h1 id="app-logo" class="text-xl md:text-2xl font-bold text-accent-red tracking-wider uppercase">
+                    <h1 id="navbar-logo" class="text-xl md:text-2xl font-bold text-accent-red tracking-wider uppercase">
                         Boxing University
                     </h1>
                 </div>
             </div>
 
-            <!-- Left Side -->
+            <!-- Right Side -->
             <div
-                class="relative flex-1 opacity-75 z-10 min-h-[500px] md:min-h-9/10 text-center p-3 bg-white mx-2 mt-5 mb-5 rounded-[2vw] shadow-lg">
+                class="hidden relative md:flex flex-col min-h-125 sm:h-[25vw] md:h-[45vw] lg:h-[50vw] sm:w-[25vw] md:w-[45vw] lg:w-[50vw] p-3 bg-primary-bg mx-[4vw] my-[5vw] rounded-[2vw] shadow-lg overflow-visible">
                 <!--ATT: I have a feeling mr will fuck up img, but we'll see-->
                 <!-- Eventually Hero image will be inside here because it has to flex according to this div-->
+                <div class="mx-auto flex items-center text-right md:justify-center rounded-b-md">
+                    <!-- Desktop navigation links -->
+                    <nav class="hidden md:flex space-x-6">
+                        <a href="#about"
+                            class="navbar-header text-text-white hover:text-accent-red transition-colors">About</a>
+                        <a href="#services"
+                            class="navbar-header text-text-white hover:text-accent-red transition-colors">Services</a>
+                        <a href="#contact"
+                            class="navbar-header text-text-white hover:text-accent-red transition-colors">Contact</a>
+                    </nav>
+
+                    <!-- Mobile menu button -->
+                    <button id="menu-button" class="md:hidden text-text-white focus:outline-none justify-end"
+                        aria-label="Toggle menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Hero Image-->
+                <img class="absolute z-50 bottom-0 origin-bottom md:w-[150%] -ml-100"
+                    src="/src/assets/imgs/tryCutout2.png" alt="Boxing University Gym">
             </div>
         </section>
     </header>

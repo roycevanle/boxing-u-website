@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -8,13 +9,29 @@
   --color-text-white: #F0F0F0;        /* Main text color (Off-White) */
 }
 
+@layer base {
+  p {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
 body {
     font-family: 'Inter', sans-serif;
 }
 
 /* Apply the specific Slab Serif font to the logo */
-#app-logo {
-    font-family: 'Roboto Slab', serif;
+.navbar-logo {
+    font-family: "BBH Bartle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar-header {
+    font-family: "BBH Bartle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* Style for the mobile menu transition */
