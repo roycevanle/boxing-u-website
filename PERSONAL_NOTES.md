@@ -12,6 +12,14 @@ Things to consider when using a .gitignore file:
     }
 ## VSCode
 1. Shortcut to auto-align is SHIFT+ALT+F
+## Tailwind
+1. base simply applies styles globally. Elements like h1 tags or p tags. @layer base
+2. components for styling specific components like cards, foots, & more @layer components
+3. utilities for margins, typography, padding, colors, & more --->
+4. directive @apply inserts tailwind 
+5. @
+
+
 
 # Things I have to do:
 1. Put the pictures where they gotta be

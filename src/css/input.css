@@ -19,12 +19,17 @@
 
 @layer component {
   .hero-col {
-    @apply flex-col rounded-4xl;
+    @apply flex-col rounded-4xl mx-[2vw] my-[2vh];
   }
 }
 
 body {
     font-family: 'Inter', sans-serif;
+}
+
+/* Applying Shadow*/
+@utility shadow-custom-red {
+    @apply shadow-[-8px_12px_4px_0px_rgb(158_40_40)];
 }
 
 /* Apply BBH Bartle */
@@ -51,4 +56,6 @@ body {
 
 Keep for later
 sm:w-[20vw] md:w-[25vw] lg:w-[5vw] xl:w-[50vw]
+
+mx-[2vw] my-[2vw]
 */
