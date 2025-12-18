@@ -1,61 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import "tailwindcss";
 
-@theme {
-  --color-primary-bg: #1A1A1A;        /* Darkest background color (Black/Dark Gray) */
-  --color-secondary-bg: #2C2C2C;      /* Secondary background for sections (Lighter Dark Gray) */
-  --color-secondary-text: #A0A0A0;    /* Muted text color (Medium Gray) */
-  --color-accent-red: #E33A3A;        /* Vibrant action color (Red) */
-  --color-text-white: #F0F0F0;        /* Main text color (Off-White) */
+/* Global Reset and Smooth Scroll */
+html {
+    scroll-behavior: smooth;
 }
 
-@layer base {
-  p {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+/* Custom Scrollbar for the dark theme */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
 }
 
-@layer component {
-  .hero-col {
-    @apply flex-col rounded-4xl mx-[2vw] my-[2vh];
-  }
+/* Glassmorphism Header Effect on Scroll */
+header.scrolled {
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
+/* Animation for images to give a gritty feel */
+img {
+    filter: grayscale(100%) contrast(120%);
+    transition: filter 0.5s ease;
 }
 
-/* Applying Shadow*/
-@utility shadow-custom-red {
-    @apply shadow-[-8px_12px_4px_0px_rgb(158_40_40)];
+section:hover img {
+    filter: grayscale(80%) contrast(110%);
 }
 
-/* Apply BBH Bartle */
-.navbar-header {
-    font-family: "BBH Bartle", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+/* Mobile Menu Slide */
+.mobile-nav-active {
+    overflow: hidden;
 }
 
-/* Style for the mobile menu transition */
-.mobile-menu {
-    transition: transform 0.3s ease-in-out;
-    transform: translateY(-100%);
+/* Text Selection Color */
+::selection {
+    background: #FF0000;
+    color: white;
 }
-
-.mobile-menu.active {
-    transform: translateY(0);
-}
-
-/*
-# for id
-. for class
-
-
-Keep for later
-sm:w-[20vw] md:w-[25vw] lg:w-[5vw] xl:w-[50vw]
-
-mx-[2vw] my-[2vw]
-*/
