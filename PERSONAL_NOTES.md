@@ -17,13 +17,7 @@ Things to consider when using a .gitignore file:
 2. components for styling specific components like cards, foots, & more @layer components
 3. utilities for margins, typography, padding, colors, & more --->
 4. directive @apply inserts tailwind 
-5. @
-
-
-
-# Things I have to do:
-1. Put the pictures where they gotta be
-
+5. To leave a negative margin use -m or -my, -mx, -mt, -mb, -mr, -ml
 
 # Other Boxing Gyms' Websites:
 https://www.levelgroundmma.org
@@ -31,6 +25,25 @@ https://www.pacificmuaythai.com
 https://www.seattleboxinggym.com/
 
 # Resources
-To look for designs
-1. https://www.reddit.com/r/web_design/comments/12q1iuo/what_are_some_go_to_websites_to_look_at_for_good/
+-To look for designs
+  https://www.reddit.com/r/web_design/comments/12q1iuo/what_are_some_go_to_websites_to_look_at_for_good/
+  https://www.youtube.com/watch?v=olYFQzXrpWI
+  https://www.youtube.com/watch?v=waHuVF3XuMA
+-To look for hero images
+  https://www.reddit.com/r/web_design/comments/criu5v/how_do_you_find_amazing_hero_images_for_your/
+  Flex Alignment Stuff
+  https://marina-ferreira.github.io/tutorials/css/flexbox/
+
+
+# Things I have to do:
+1. Figure out how to scale the hero pic
+2. Fix nav bar
+3. Work on Call to Action
+4. Margins
+5. look into shopify, looks like they were able to scale l&w of their flexbox
+  https://www.shopify.com/
+Resources
+  https://www.youtube.com/watch?v=6biMWgD6_JY&t=1390s
+  Reference: https://www.youtube.com/watch?v=z5yvZW8Ep-E
+  BoxingU
 
