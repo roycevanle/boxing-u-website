@@ -19,6 +19,9 @@ Things to consider when using a .gitignore file:
 4. directive @apply inserts tailwind 
 5. To leave a negative margin use -m or -my, -mx, -mt, -mb, -mr, -ml
 6. REMEMBER  npx @tailwindcss/cli -i ./src/css/input.css -o ./build/css/output.css --watch
+## CSS
+When min-width not working? Probably cause you need to define a width 1st since 100% width by default is on block elements.
+https://stackoverflow.com/questions/78367415/tailwindcss-min-width-is-not-being-applied
 
 
 # Other Boxing Gyms' Websites:

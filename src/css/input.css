@@ -20,6 +20,28 @@
     font-weight: 400;
     font-style: normal;
   }
+  /* Apply the grid to the entire page background */
+  body {
+    background-image: url('/src/assets/imgs/greyGrid.jpg');
+    background-attachment: fixed; /* Same as bg-fixed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black; /* Base color for the blend */
+  }
+
+  /* Create a tint overlay using a pseudo-element on the body */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: -1; /* Keeps it behind your content but over the grid */
+    pointer-events: none;
+  }
 }
 
 @layer component {
@@ -59,8 +81,8 @@ body {
     30% 0%,   /* L 80,0 */
     93.3% 0%,   /* L 140,0 */
     100% 5%,    /* L 150,10 */
-    100% 90%,   /* L 150,190 */
-    93.3% 95%,   /* L 150,190 */
+    100% 90%,   /* L 150,190 this is the bottom right corner, most right*/
+    93.3% 95%,   /* L 150,190 this is the point at right corner, slight left*/
     80% 95%,   /* L 70,10 change this & the bottom for straight corner line*/
     70% 100%, /* L 140,200 */
     6.7% 100%,  /* L 10,200 */
@@ -83,10 +105,6 @@ body {
     background-blend-mode: normal; /* Resets blending logic */
   }
 }
-
-/* @utility custom-img {
-  background: url('../assets/tryCutout1.png') rgba(0,0,0,0.45) no-repeat center center/cover;
-} */
 
 .title {
   position: absolute;
