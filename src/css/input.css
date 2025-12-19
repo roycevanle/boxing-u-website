@@ -15,11 +15,16 @@
     font-weight: 400;
     font-style: normal;
   }
+  h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 }
 
 @layer component {
   .hero-col {
-    @apply flex-col rounded-4xl mx-[2vw] my-[2vh];
+    @apply flex-col rounded-4xl md:mx-[2vw] md:my-[2vh];
   }
 }
 
@@ -32,6 +37,12 @@ body {
     @apply shadow-[-8px_12px_4px_0px_rgb(158_40_40)];
 }
 
+@utility font-bartle {
+    font-family: "BBH Bartle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 /* Apply BBH Bartle */
 .navbar-header {
     font-family: "BBH Bartle", sans-serif;
@@ -42,21 +53,60 @@ body {
 @utility custom-poly {
   width: 100%; /* Or any responsive width */
   aspect-ratio: 150 / 200; /* Maintains the shape's proportions */
-  
   clip-path: polygon(
-    6.7% 10%,   /* M 10,20 */
-    40% 10%,    /* L 60,20 */
-    46.7% 5%,   /* L 70,10 */
-    53.3% 0%,   /* L 80,0 */
+    6.7% 5%,   /* M 10,20 || x-y*/
+    23% 5%,   /* L 70,10 change this & the bottom for straight corner line*/
+    30% 0%,   /* L 80,0 */
     93.3% 0%,   /* L 140,0 */
     100% 5%,    /* L 150,10 */
-    100% 95%,   /* L 150,190 */
-    93.3% 100%, /* L 140,200 */
+    100% 90%,   /* L 150,190 */
+    93.3% 95%,   /* L 150,190 */
+    80% 95%,   /* L 70,10 change this & the bottom for straight corner line*/
+    70% 100%, /* L 140,200 */
     6.7% 100%,  /* L 10,200 */
     0% 95%,     /* L 0,190 */
-    0% 15%,     /* L 0,30 */
-    6.7% 10%    /* Z (Back to start) */
+    0% 10%,     /* L 0,30 start of */
+    6.7% 5%    /* Z (Back to start) */
   );
+  background-image: url('/src/assets/imgs/jaden1Edited.jpg');
+  background-color: rgba(0, 0, 0, 0.45); /* This is your tint */
+  background-blend-mode: multiply; /* Or 'overlay' / 'darken' */
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* REVERT ON DESKTOP (md breakpoint) */
+  @media (min-width: 768px) {
+    clip-path: none;             /* Removes the polygon shape */
+    aspect-ratio: auto;          /* Allows the div to take natural height */
+    background-image: none;      /* Removes the image */
+    background-color: transparent; /* Removes the tint */
+    background-blend-mode: normal; /* Resets blending logic */
+  }
+}
+
+/* @utility custom-img {
+  background: url('../assets/tryCutout1.png') rgba(0,0,0,0.45) no-repeat center center/cover;
+} */
+
+.title {
+  position: absolute;
+  top: 2.5%;
+  left: 9%;
+  height: 30%;
+  width: 60.7%;
+  clip-path: inset(0.5px round 8px 0);
+  z-index: 50;
+  /* background-color:rgba(0, 0, 0, 0.5); */
+  @apply p-3 font-bartle text-accent-red;
+}
+
+.title1 {
+  height: 5%;
+  width: 95%;
+  z-index: 50;
+  font-size: clamp(.5rem, 2vw + 1.5rem, 2rem); /* min val, preferred val, max val */
+  /* background-color:rgba(0, 0, 0, 0.5); */
+  @apply p-3 font-bartle text-accent-red pl-5;
 }
 
 /* Style for the mobile menu transition */

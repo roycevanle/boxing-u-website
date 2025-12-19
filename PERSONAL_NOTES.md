@@ -35,6 +35,8 @@ https://www.seattleboxinggym.com/
   https://www.reddit.com/r/web_design/comments/criu5v/how_do_you_find_amazing_hero_images_for_your/
   Flex Alignment Stuff
   https://marina-ferreira.github.io/tutorials/css/flexbox/
+  For custom shapes
+  https://css-generators.com/
 
 
 # Things I have to do:
