@@ -22,7 +22,7 @@
         <section class="relative flex min-h-lvh min-w-lvw p-4 bg-secondary-bg">
 
             <!-- Left Side -->
-            <div class="hero-col flex justify-between min-h-125 p-3">
+            <div class="hero-col flex justify-between min-h-125 p-3 custom-poly bg-emerald-700 md:[clip-path:none] md:aspect-auto">
                 <div>
                     <h1 class="navbar-header text-xl md:text-3xl font-bold text-accent-red tracking-wider uppercase">
                         Boxing University
@@ -43,16 +43,16 @@
                     </p>
                 </div>
                 <!-- Statistics -->
-                <div> <!--Should be justify-content:center to distribute text evenly-->
-                    <h1 class="text-xl md:text-2xl font-bold text-accent-red tracking-wider uppercase">
-                        Boxing University
-                    </h1>
-                </div>
+                <a href="#"
+                    class="max-[10%] w-30 text-center grow-0 px-5 py-2 font-semibold text-sm text-accent-red border border-accent-red rounded-full hover:bg-accent-red hover:text-text-white transition-colors">
+                    Learn More
+                </a>
             </div>
 
             <!-- Right Side -->
             <div class="hero-col hidden relative md:flex p-3 bg-primary-bg overflow-visible shadow-custom-red">
-                <img class="absolute z-50 bottom-0 origin-bottom md:w-[150%] md:y-[150%] -ml-100 max-w-[200%]" src="/src/assets/imgs/tryCutout2.png" alt="Boxing University Gym">
+                <img class="absolute z-50 bottom-0 origin-bottom md:w-[150%] md:y-[150%] -ml-100 max-w-[200%]"
+                    src="/src/assets/imgs/tryCutout2.png" alt="Boxing University Gym">
                 <!--ATT: I have a feeling mr will fuck up img, but we'll see-->
                 <!-- Eventually Hero image will be inside here because it has to flex according to this div-->
                 <div class="mx-auto flex items-center text-right md:justify-center rounded-b-md">

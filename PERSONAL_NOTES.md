@@ -18,6 +18,8 @@ Things to consider when using a .gitignore file:
 3. utilities for margins, typography, padding, colors, & more --->
 4. directive @apply inserts tailwind 
 5. To leave a negative margin use -m or -my, -mx, -mt, -mb, -mr, -ml
+6. REMEMBER  npx @tailwindcss/cli -i ./src/css/input.css -o ./build/css/output.css --watch
+
 
 # Other Boxing Gyms' Websites:
 https://www.levelgroundmma.org

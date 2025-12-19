@@ -39,6 +39,26 @@ body {
     font-style: normal;
 }
 
+@utility custom-poly {
+  width: 100%; /* Or any responsive width */
+  aspect-ratio: 150 / 200; /* Maintains the shape's proportions */
+  
+  clip-path: polygon(
+    6.7% 10%,   /* M 10,20 */
+    40% 10%,    /* L 60,20 */
+    46.7% 5%,   /* L 70,10 */
+    53.3% 0%,   /* L 80,0 */
+    93.3% 0%,   /* L 140,0 */
+    100% 5%,    /* L 150,10 */
+    100% 95%,   /* L 150,190 */
+    93.3% 100%, /* L 140,200 */
+    6.7% 100%,  /* L 10,200 */
+    0% 95%,     /* L 0,190 */
+    0% 15%,     /* L 0,30 */
+    6.7% 10%    /* Z (Back to start) */
+  );
+}
+
 /* Style for the mobile menu transition */
 .mobile-menu {
     transition: transform 0.3s ease-in-out;
