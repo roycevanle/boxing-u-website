@@ -22,7 +22,7 @@
   }
   /* Apply the grid to the entire page background */
   body {
-    background-image: url('../../src/assets/imgs/greyGrid.jpg');
+    background-image: url('../imgs/greyGrid.jpg');
     background-attachment: fixed; /* Same as bg-fixed */
     background-size: cover;
     background-position: center;
@@ -90,7 +90,7 @@ body {
     0% 10%,     /* L 0,30 start of */
     6.7% 5%    /* Z (Back to start) */
   );
-  background-image: url('../../src/assets/imgs/jaden1Edited.jpg');
+  background-image: url('../imgs/jaden1Edited.jpg');
   background-color: rgba(0, 0, 0, 0.45); /* This is your tint */
   background-blend-mode: multiply; /* Or 'overlay' / 'darken' */
   background-repeat: no-repeat;
