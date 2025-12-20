@@ -323,14 +323,11 @@
   .w-50 {
     width: calc(var(--spacing) * 50);
   }
-  .max-w-\[200\%\] {
-    max-width: 200%;
+  .w-full {
+    width: 100%;
   }
   .min-w-20 {
     min-width: calc(var(--spacing) * 20);
-  }
-  .min-w-lvw {
-    min-width: 100lvw;
   }
   .grow-0 {
     flex-grow: 0;
@@ -605,11 +602,6 @@
       width: calc(var(--spacing) * 10);
     }
   }
-  .md\:w-\[150\%\] {
-    @media (width >= 48rem) {
-      width: 150%;
-    }
-  }
   .md\:grid-cols-2 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -752,6 +744,10 @@
     background-color: rgba(0, 0, 0, 0.45);
     z-index: -1;
     pointer-events: none;
+  }
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
   }
 }
 @layer component {

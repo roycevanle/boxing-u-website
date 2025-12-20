@@ -22,6 +22,11 @@ Things to consider when using a .gitignore file:
 ## CSS
 When min-width not working? Probably cause you need to define a width 1st since 100% width by default is on block elements.
 https://stackoverflow.com/questions/78367415/tailwindcss-min-width-is-not-being-applied
+1. To prevent overflowing where there's extra padding or scuffed margins, add to global css file, it acts as a safety net.
+  html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  }
 
 
 # Other Boxing Gyms' Websites:

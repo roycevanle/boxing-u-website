@@ -42,6 +42,12 @@
     z-index: -1; /* Keeps it behind your content but over the grid */
     pointer-events: none;
   }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    /* @apply md: overflow-x hidden; MAYBE CHANGE. Prevent horizontal scroll on medium screens and up. */
+  }
 }
 
 @layer component {
