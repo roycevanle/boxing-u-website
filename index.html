@@ -46,23 +46,43 @@
                             coaches and a supportive community, we provide top-notch training for all skill levels.
                         </p>
                     </div>
+                    <!-- Statistics -->
+                    <div class="hidden flex-row space-x-6 mt-6 md:flex">
+                        <div class="flex-stat items-center justify-center">
+                            <p class="text-6xl font-bold text-accent-red">80+</p>
+                            <p class="text-sm text-secondary-text">Years of Experience</p>
+                        </div>
+                        <div class="flex-stat text-center">
+                            <p class="text-6xl font-bold text-accent-red">95%</p>
+                            <p class="text-sm text-secondary-text">Community Approval Rating</p>
+                        </div>
+                        <div class="flex-stat text-center">
+                            <p class="text-6xl font-bold text-accent-red">3+</p>
+                            <p class="text-sm text-secondary-text">Golden Gloves Champions</p>
+                        </div>
+                    </div>
+                    <!-- Learn More Button -->
+                    <a href="#pricing"
+                        class="relative w-50 text-center grow-0 py-1.5 font-semibold text-lg overflow-hidden rounded-full bg-accent-red hover:bg-white group transition-all">
+                        <span
+                            class="absolute inset-0 border-0 group-hover:border-25 ease-linear duration-100 transition-all border-white rounded-full"></span>
+                        <span
+                            class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-accent-red">Learn
+                            More</span>
+                    </a>
+
                     <!-- Mobile Hero Section -->
-                    <div class="p-4">
-                        <p class="md:hidden w-50 min-w-20 pl-5 text-sm">
+                    <div class="md:hidden p-4">
+                        <p class="w-50 min-w-20 pl-5 text-sm">
                             Explore your potential where hardwork starts with a 1-2.
                         </p>
-                        <h1 class="title1 text-2xl md:hidden font-bold text-accent-red tracking-wider">
+                        <h1 class="title1 text-2xl font-bold text-accent-red tracking-wider">
                             Boxing
                         </h1>
-                        <h1 class="title1 text-2xl md:hidden font-bold text-accent-red tracking-wider mt-2">
+                        <h1 class="title1 text-2xl font-bold text-accent-red tracking-wider mt-2">
                             University
                         </h1>
                     </div>
-                    <!-- Statistics -->
-                    <a href="#"
-                        class="max-[10%] w-30 text-center grow-0 px-5 py-2 font-semibold text-sm text-accent-red border border-accent-red rounded-full hover:bg-accent-red hover:text-text-white transition-colors">
-                        Learn More
-                    </a>
                 </div>
 
                 <!-- Right Side -->
@@ -77,10 +97,10 @@
                     <div class="relative z-10 flex justify-center p-6">
                         <!-- Desktop navigation links -->
                         <nav class="flex flex-row space-x-6">
-                            <a href="#about"
-                                class="navbar-header text-text-white hover:text-accent-red transition-colors">About</a>
-                            <a href="#services"
-                                class="navbar-header text-text-white hover:text-accent-red transition-colors">Services</a>
+                            <a href="#pricing"
+                                class="navbar-header text-text-white hover:text-accent-red transition-colors">Pricing</a>
+                            <a href="#faq"
+                                class="navbar-header text-text-white hover:text-accent-red transition-colors">FAQ</a>
                             <a href="#contact"
                                 class="navbar-header text-text-white hover:text-accent-red transition-colors">Contact</a>
                         </nav>
@@ -92,13 +112,13 @@
     <!-- Main content container -->
     <main>
         <!-- Services section with cards for different offerings -->
-        <section id="services" class="py-16 md:py-24 md:bg-primary-bg">
+        <section id="pricing" class="py-16 md:py-24 md:bg-primary-bg">
             <div class="container mx-auto px-4 md:px-8">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 uppercase text-accent-red tracking-wider">
                     Our Training
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Private Sessions Card -->
+                    <!-- Private/Group Sessions Card -->
                     <div
                         class="relative rounded-xl shadow-xl border border-secondary-bg hover:scale-[1.02] transition-transform duration-300 overflow-hidden">
                         <div class="absolute inset-0 bg-cover bg-center z-0"
@@ -116,10 +136,11 @@
                                 <circle cx="12" cy="12" r="2" />
                             </svg>
                             <h3 class="text-xl md:text-2xl font-semibold">
-                                Private Sessions
+                                Private / Group Sessions
                             </h3>
                             <p class="text-sm md:text-base text-secondary-text mb-6">
-                                Get one-on-one coaching to master your technique, perfect your form, and achieve
+                                Get one-on-one coaching or take group classes to master your technique, perfect your
+                                form, and achieve
                                 your goals
                                 with personalized guidance.
                             </p>
@@ -149,10 +170,11 @@
                                 <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                             </svg>
                             <h3 class="text-xl md:text-2xl font-semibold">
-                                Group Classes
+                                Open Gym / Drop-Ins
                             </h3>
                             <p class="text-sm md:text-base text-secondary-text mb-6">
-                                Join our high-energy classes to build stamina, learn new skills, and become part of a
+                                New to boxing? Utilize our open gym or drop-in to workout & gauge your interest to
+                                become part of a
                                 supportive and motivating community.
                             </p>
                             <a href="#"
@@ -203,27 +225,34 @@
         </section>
 
         <!-- About/Stats Section -->
-        <section id="about" class="py-16 md:py-24 md:bg-secondary-bg">
+        <section id="faq" class="py-16 md:py-24 md:bg-secondary-bg">
             <div class="container mx-auto px-4 md:px-8">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 uppercase text-accent-red tracking-wider">
-                    Our Legacy
+                    Frequently Asked Questions
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                     <div class="p-6 bg-primary-bg rounded-xl shadow-lg border border-secondary-bg">
-                        <p class="text-4xl md:text-5xl font-bold text-accent-red mb-2">80+</p>
-                        <p class="text-lg text-secondary-text">Years of Combined Experience</p>
+                        <p class="text-2xl md:text-2xl font-bold text-accent-red mb-2">How do I sign up?</p>
+                        <p class="text-m text-secondary-text">Sign up via PushPress—first, 1st session
+                            is free! At arrival, you'll sign waiver, we'll help you wrap your hands, and let you know what to expect. Arrive 15-20
+                            minutes early if it is your 1st time.</p>
                     </div>
                     <div class="p-6 bg-primary-bg rounded-xl shadow-lg border border-secondary-bg">
-                        <p class="text-4xl md:text-5xl font-bold text-accent-red mb-2">100+</p>
-                        <p class="text-lg text-secondary-text">Amateur Team Members</p>
+                        <p class="text-2xl md:text-2xl font-bold text-accent-red mb-2">What do I need to bring to a
+                            training session?</p>
+                        <p class="text-m text-secondary-text">Bring your own hand wraps and gloves. We'll have gloves/wraps to borrow & for purchase.</p>
                     </div>
                     <div class="p-6 bg-primary-bg rounded-xl shadow-lg border border-secondary-bg">
-                        <p class="text-4xl md:text-5xl font-bold text-accent-red mb-2">3+</p>
-                        <p class="text-lg text-secondary-text">Golden Gloves Champions</p>
+                        <p class="text-2xl md:text-2xl font-bold text-accent-red mb-2">Are the classes suitable for
+                            beginners?</p>
+                        <p class="text-m text-secondary-text">All of our sessions, with the exception of sparring, are
+                            open to beginners and first-time boxers. Boxing University Gym is a welcoming place for
+                            boxers of all skill and fitness levels.</p>
                     </div>
                     <div class="p-6 bg-primary-bg rounded-xl shadow-lg border border-secondary-bg">
-                        <p class="text-4xl md:text-5xl font-bold text-accent-red mb-2">10+</p>
-                        <p class="text-lg text-secondary-text">Professional Fighters</p>
+                        <p class="text-2xl md:text-2xl font-bold text-accent-red mb-2">When are payments due?</p>
+                        <p class="text-m text-secondary-text">Monthly payments are due the 5th of each month. Privates
+                            and individual classes are due at time of session.</p>
                     </div>
                 </div>
             </div>
@@ -278,7 +307,7 @@
     <!-- Footer with social media links and copyright information -->
     <footer class="bg-secondary-bg p-8 text-center text-secondary-text border-t border-secondary-bg">
         <div class="flex justify-center space-x-6 mb-4">
-            <a href="#" aria-label="Instagram" class="hover:text-accent-red transition-colors">
+            <a href="https://www.instagram.com/boxinguniversity_/" target="_blank" aria-label="Instagram" class="hover:text-accent-red transition-colors">
                 <!-- Lucide icon for Instagram -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -288,14 +317,14 @@
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                 </svg>
             </a>
-            <a href="#" aria-label="Facebook" class="hover:text-accent-red transition-colors">
+            <!-- <a href="#" aria-label="Facebook" class="hover:text-accent-red transition-colors"> -->
                 <!-- Lucide icon for Facebook -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="w-6 h-6">
                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                 </svg>
-            </a>
+            </a> -->
         </div>
         <p>&copy; 2026 Boxing University Gym. All rights reserved.</p>
     </footer>
