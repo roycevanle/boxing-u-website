@@ -1,22 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
   --color-primary-bg: #1A1A1A;        /* Darkest background color (Black/Dark Gray) */
   --color-secondary-bg: #2C2C2C;      /* Secondary background for sections (Lighter Dark Gray) */
-  --color-secondary-text: #A0A0A0;    /* Muted text color (Medium Gray) */
+  --color-secondary-text: #B8B8B8;    /* Muted text color (Medium Gray) */
   --color-accent-red: #E33A3A;        /* Vibrant action color (Red) */
   --color-text-white: #F0F0F0;        /* Main text color (Off-White) */
 }
 
 @layer base {
   p {
-    font-family: "Lato", sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
-  h2 {
-    font-family: "Lato", sans-serif;
+  h1 {
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
