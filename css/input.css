@@ -168,6 +168,16 @@ body {
   @apply relative rounded-xl shadow-xl border border-secondary-bg hover:scale-[1.02] transition-transform duration-300 overflow-hidden;
 }
 
+/* .card-training {
+  @apply p-6 md:p-8 flex flex-col items-start h-full;
+}
+*/
+/* OLD WORKING CARD
+.card-container {
+  @apply relative rounded-xl shadow-xl border border-secondary-bg hover:scale-[1.02] transition-transform duration-300 overflow-hidden;
+}
+  */
+
 /* OUR TRAINING - Reveals a card which slides up from bottom & covers original */
 .card-reveal {
   position: absolute;
