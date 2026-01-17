@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Boxing University Gym</title>
+
     <!-- Tailwind CSS for styling -->
     <link href="css/output.css" rel="stylesheet">
 
@@ -22,13 +23,12 @@
         <!-- Hero section -->
         <section
             class="relative flex flex-col md:flex-row min-h-dvh w-full items-center justify-center p-4 gap-4 md:bg-secondary-bg">
-            <div class="w-full max-w-[120rem] flex flex-col md:flex-row gap-4">
+            <div class="w-full max-w-480 flex flex-col md:flex-row gap-4">
                 <!-- Left Side -->
                 <div
                     class="hero-col flex justify-end my-10 min-h-[90dvh] md:flex-[1.5] md:justify-between md:min-h-275 p-6 custom-poly md:[clip-path:none] md:aspect-auto">
                     <div>
-                        <h1
-                            class="hidden md:block navbar-header text-xl md:text-6xl font-bold text-accent-red tracking-wider">
+                        <h1 class="hidden md:block navbar-header text-xl md:text-6xl text-accent-red font-bold">
                             Boxing University
                         </h1>
                     </div>
@@ -76,10 +76,10 @@
                         <p class="w-50 min-w-20 pl-5 text-sm">
                             Explore your potential where hardwork starts with a 1-2.
                         </p>
-                        <h1 class="title1 text-2xl font-bold text-accent-red tracking-wider">
+                        <h1 class="title1 text-2xl font-bold text-accent-red">
                             Boxing
                         </h1>
-                        <h1 class="title1 text-2xl font-bold text-accent-red tracking-wider mt-2">
+                        <h1 class="title1 text-2xl font-bold text-accent-red mt-2">
                             University
                         </h1>
                     </div>
@@ -91,7 +91,7 @@
                     <picture>
                         <source type="image/avif" srcset="imgs/tryCutout2.avif">
                         <source type="image/webp" srcset="imgs/tryCutout2.webp">
-                        <img class="absolute bottom-0 right-0 h-full w-auto max-w-none z-0 pointer-events-none [mask-image:linear-gradient(to_right,transparent,black_30%)]"
+                        <img class="absolute bottom-0 right-0 h-full w-auto max-w-none z-0 pointer-events-none mask-[linear-gradient(to_right,transparent,black_30%)]"
                             src="imgs/geminiHero.png" alt="Two boxers with a focused look and pose">
                     </picture>
                     <div class="relative z-10 flex justify-center p-6">
@@ -114,13 +114,13 @@
         <!-- Services section with cards for different offerings -->
         <section id="pricing" class="py-16 md:py-24 md:bg-primary-bg">
             <div class="container mx-auto px-4 md:px-8">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 uppercase text-accent-red tracking-wider">
+                <h2 class="text-3xl md:text-4xl text-center mb-12 text-accent-red">
                     Our Training
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Private/Group Sessions Card -->
                     <div
-                        class="relative rounded-xl shadow-xl border border-secondary-bg hover:scale-[1.02] transition-transform duration-300 overflow-hidden">
+                        class="card-training">
                         <div class="absolute inset-0 bg-cover bg-center z-0"
                             style="background-image: url('imgs/privateSessions.jpg'); background-position: 50% 10%;">
                         </div>
@@ -135,10 +135,10 @@
                                 <circle cx="12" cy="12" r="6" />
                                 <circle cx="12" cy="12" r="2" />
                             </svg>
-                            <h3 class="text-xl md:text-2xl font-semibold">
+                            <h3>
                                 Private / Group Sessions
                             </h3>
-                            <p class="text-sm md:text-base text-secondary-text mb-6">
+                            <p class="text-secondary-text mb-6">
                                 Get one-on-one coaching or take group classes to master your technique, perfect your
                                 form, and achieve
                                 your goals
@@ -153,7 +153,7 @@
                     </div>
                     <!-- Group Classes Card -->
                     <div
-                        class="relative rounded-xl shadow-xl border border-secondary-bg hover:scale-[1.02] transition-transform duration-300 overflow-hidden">
+                        class="card-training">
                         <div class="absolute inset-0 bg-cover bg-center z-0"
                             style="background-image: url('imgs/groupClasses.jpg'); background-position: 50% 10%;">
                         </div>
@@ -169,10 +169,10 @@
                                 <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
                                 <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                             </svg>
-                            <h3 class="text-xl md:text-2xl font-semibold">
+                            <h3>
                                 Open Gym / Drop-Ins
                             </h3>
-                            <p class="text-sm md:text-base text-secondary-text mb-6">
+                            <p class="text-secondary-text mb-6">
                                 New to boxing? Utilize our open gym or drop-in to workout & gauge your interest to
                                 become part of a
                                 supportive and motivating community.
@@ -185,7 +185,7 @@
                     </div>
                     <!-- Events Card -->
                     <div
-                        class="relative rounded-xl shadow-xl border border-secondary-bg hover:scale-[1.02] transition-transform duration-300 overflow-hidden">
+                        class="card-training">
                         <div class="absolute inset-0 bg-cover bg-center z-0"
                             style="background-image: url('imgs/events.jpg'); background-position: 50% 10%;">
                         </div>
@@ -207,13 +207,12 @@
                                 <path d="M12 18h.01" />
                                 <path d="M16 18h.01" />
                             </svg>
-                            <h3 class="text-xl md:text-2xl font-semibold">
+                            <h3>
                                 Events
                             </h3>
-                            <p class="text-sm md:text-base text-secondary-text mb-6">
-                                Step into the ring for our sparring nights, seminars, and special events. Test your
-                                skills
-                                and connect with the boxing family.
+                            <p class="text-secondary-text mb-6">
+                                Step into the ring for our sparring nights, shows, and special events. Come connect with
+                                your boxing family.
                             </p>
                             <a href="#"
                                 class="px-5 py-2 font-semibold text-sm text-accent-red border border-accent-red rounded-full hover:bg-accent-red hover:text-text-white transition-colors">
@@ -227,31 +226,33 @@
         <!-- About/Stats Section -->
         <section id="faq" class="py-16 md:py-24 md:bg-secondary-bg">
             <div class="container mx-auto px-4 md:px-8">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 uppercase text-accent-red tracking-wider">
+                <h2 class="text-3xl md:text-4xl text-center mb-12 text-accent-red">
                     Frequently Asked Questions
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="p-6 bg-primary-bg rounded-xl shadow-lg border border-secondary-bg">
-                        <p class="text-2xl md:text-2xl font-bold text-accent-red mb-2">How do I sign up?</p>
-                        <p class="text-m text-secondary-text">Sign up via PushPress—first, 1st session
-                            is free! At arrival, you'll sign waiver, we'll help you wrap your hands, and let you know what to expect. Arrive 15-20
+                        <h3 class="text-accent-red mb-2">How do I sign up?</h3>
+                        <p class="text-secondary-text">Sign up via PushPress—first, 1st session
+                            is free! At arrival, you'll sign waiver, we'll help you wrap your hands, and let you know
+                            what to expect. Arrive 15-20
                             minutes early if it is your 1st time.</p>
                     </div>
                     <div class="p-6 bg-primary-bg rounded-xl shadow-lg border border-secondary-bg">
-                        <p class="text-2xl md:text-2xl font-bold text-accent-red mb-2">What do I need to bring to a
-                            training session?</p>
-                        <p class="text-m text-secondary-text">Bring your own hand wraps and gloves. We'll have gloves/wraps to borrow & for purchase.</p>
+                        <h3 class="text-accent-red mb-2">What do I need to bring to a
+                            training session?</h3>
+                        <p class="text-secondary-text">Bring your own hand wraps and gloves. We'll have
+                            gloves/wraps to borrow & for purchase.</p>
                     </div>
                     <div class="p-6 bg-primary-bg rounded-xl shadow-lg border border-secondary-bg">
-                        <p class="text-2xl md:text-2xl font-bold text-accent-red mb-2">Are the classes suitable for
-                            beginners?</p>
-                        <p class="text-m text-secondary-text">All of our sessions, with the exception of sparring, are
+                        <h3 class="text-accent-red mb-2">Are the classes suitable for
+                            beginners?</h3>
+                        <p class="text-secondary-text">All of our sessions, with the exception of sparring, are
                             open to beginners and first-time boxers. Boxing University Gym is a welcoming place for
                             boxers of all skill and fitness levels.</p>
                     </div>
                     <div class="p-6 bg-primary-bg rounded-xl shadow-lg border border-secondary-bg">
-                        <p class="text-2xl md:text-2xl font-bold text-accent-red mb-2">When are payments due?</p>
-                        <p class="text-m text-secondary-text">Monthly payments are due the 5th of each month. Privates
+                        <h3 class="text-accent-red mb-2">When are payments due?</h3>
+                        <p class="text-secondary-text">Monthly payments are due the 5th of each month. Privates
                             and individual classes are due at time of session.</p>
                     </div>
                 </div>
@@ -261,7 +262,7 @@
         <!-- Contact Section -->
         <section id="contact" class="py-16 md:py-24 bg-primary-bg">
             <div class="container mx-auto px-4 md:px-8">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 uppercase text-accent-red tracking-wider">
+                <h2 class="text-3xl md:text-4xl text-center mb-12 text-accent-red tracking-widest">
                     Get in Touch
                 </h2>
                 <div class="flex flex-col md:flex-row items-center justify-center gap-8">
@@ -307,7 +308,8 @@
     <!-- Footer with social media links and copyright information -->
     <footer class="bg-secondary-bg p-8 text-center text-secondary-text border-t border-secondary-bg">
         <div class="flex justify-center space-x-6 mb-4">
-            <a href="https://www.instagram.com/boxinguniversity_/" target="_blank" aria-label="Instagram" class="hover:text-accent-red transition-colors">
+            <a href="https://www.instagram.com/boxinguniversity_/" target="_blank" aria-label="Instagram"
+                class="hover:text-accent-red transition-colors">
                 <!-- Lucide icon for Instagram -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -318,8 +320,8 @@
                 </svg>
             </a>
             <!-- <a href="#" aria-label="Facebook" class="hover:text-accent-red transition-colors"> -->
-                <!-- Lucide icon for Facebook -->
-                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            <!-- Lucide icon for Facebook -->
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="w-6 h-6">
                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />

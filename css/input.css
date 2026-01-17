@@ -14,17 +14,17 @@
     font-family: "Work Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
-  }
-  h1 {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    @apply text-sm md:text-base;
   }
   h2 {
-    @apply font-bartle text-4xl font-extrabold leading-tight;
+    @apply font-bartle text-4xl font-bold leading-tight tracking-wide md:tracking-widest;
   }
-   a {
+  h3 {
+    font-family: "Work Sans", sans-serif;
+    font-style: normal;
+    @apply text-xl md:text-2xl font-bold tracking-tight;
+  }
+  a {
     font-family: "Work Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -38,7 +38,6 @@
     background-repeat: no-repeat;
     background-color: black; /* Base color for the blend */
   }
-
   /* Create a tint overlay using a pseudo-element on the body */
   body::before {
     content: "";
@@ -51,7 +50,6 @@
     z-index: -1; /* Keeps it behind your content but over the grid */
     pointer-events: none;
   }
-
   html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -75,17 +73,18 @@ body {
             border border-zinc-700/10;
 }
 
+/* FONT - BBH Bartle */
 @utility font-bartle {
     font-family: "BBH Bartle", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-/* Apply BBH Bartle */
+/* NAVBAR - Apply BBH Bartle to navbar headers */
 .navbar-header {
     font-family: "BBH Bartle", sans-serif;
-    font-weight: 400;
     font-style: normal;
+    @apply tracking-wide md:tracking-wider;
 }
 
 @utility custom-poly {
@@ -122,7 +121,7 @@ body {
   }
 }
 
-.title {
+/* .title {
   position: absolute;
   top: 2.5%;
   left: 9%;
@@ -130,11 +129,10 @@ body {
   width: 60.7%;
   clip-path: inset(0.5px round 8px 0);
   z-index: 50;
-  /* background-color:rgba(0, 0, 0, 0.5); */
   @apply p-3 font-bartle text-accent-red;
-}
+} */
 
-.title1 {
+.title {
   height: 5%;
   width: 95%;
   z-index: 50;
@@ -165,19 +163,22 @@ body {
   border-right: none;
 }
 
-/* Adds animation for Learn More Button */
-/* .btn-learn-more {
-  @apply
-} */
+/* OUR TRAINING - Card design */
+.card-training {
+  @apply relative rounded-xl shadow-xl border border-secondary-bg hover:scale-[1.02] transition-transform duration-300 overflow-hidden;
+}
 
-
-/*
-# for id
-. for class
-
-
-Keep for later
-sm:w-[20vw] md:w-[25vw] lg:w-[5vw] xl:w-[50vw]
-
-mx-[2vw] my-[2vw]
-*/
+/* OUR TRAINING - Reveals a card which slides up from bottom & covers original */
+.card-reveal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 20;
+}
+.card-reveal.active {
+  transform: translateY(0);
+}
