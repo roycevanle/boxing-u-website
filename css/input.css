@@ -247,6 +247,18 @@ body {
   }
 }
 
+/* HERO SECTION - Mobile viewport fix for Chrome/Safari */
+@media (max-width: 767px) {
+  header section {
+    min-height: 100vh;
+    padding-bottom: 2rem; /* Extra padding to prevent cutoff */
+  }
+
+  .hero-col {
+    min-height: calc(100vh - 4rem); /* Ensure content fits with padding */
+  }
+}
+
 /* CYBERPUNK ANIMATION - Mobile Only  */
 /* Only show animation on mobile */
 .cyberpunk-animation {
