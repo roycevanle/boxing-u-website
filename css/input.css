@@ -201,3 +201,33 @@ body {
 .card-reveal.active {
   transform: translateY(0);
 }
+
+/* FAQ CAROUSEL - Responsive card widths */
+.faq-carousel-card {
+  width: 100%; /* Mobile: 1 card at a time */
+}
+
+@media (min-width: 768px) {
+  .faq-carousel-card {
+    width: 50%; /* Tablet: 2 cards at a time */
+  }
+}
+
+@media (min-width: 1024px) {
+  .faq-carousel-card {
+    width: 33.333%; /* Desktop: 3 cards at a time */
+  }
+}
+
+/* FAQ CAROUSEL - Active dot indicator */
+.faq-dot.active {
+  @apply bg-accent-red scale-150;
+}
+
+/* FAQ CAROUSEL - Hide arrows on very small screens */
+@media (max-width: 640px) {
+  .faq-carousel-prev,
+  .faq-carousel-next {
+    @apply w-10 h-10;
+  }
+}

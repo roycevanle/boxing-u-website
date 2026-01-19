@@ -270,6 +270,10 @@
                                     <ul class="mb-4 space-y-2 text-secondary-text">
                                         <li>3:30-8:30pm</li>
                                     </ul>
+                                    <h5 class="font-bold mb-2">sunday</h5>
+                                    <ul class="mb-4 space-y-2 text-secondary-text">
+                                        <li>9:00am-3:00pm</li>
+                                    </ul>
                                     <h4 class="font-semibold mb-2">Drop-In Schedule:</h4>
                                     <h5 class="font-normal mb-2">Drop-in to any class according to times under "Private/Group Sessions"</h5>
                                     <h4 class="font-semibold mb-2" style="color: var(--color-accent-red);">Pricing
@@ -354,31 +358,76 @@
                 <h2 class="text-3xl md:text-4xl text-center mb-12 text-accent-red">
                     Frequently Asked Questions
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="p-6 bg-primary-bg rounded-xl shadow-lg border border-secondary-bg">
-                        <h3 class="text-accent-red mb-2">How do I sign up?</h3>
-                        <p class="text-secondary-text">Sign up via PushPress—first, 1st session
-                            is free! At arrival, you'll sign waiver, we'll help you wrap your hands, and let you know
-                            what to expect. Arrive 15-20
-                            minutes early if it is your 1st time.</p>
+                <div class="relative max-w-6xl mx-auto">
+                    <!-- Carousel Container -->
+                    <div class="faq-carousel-wrapper overflow-hidden">
+                        <div class="faq-carousel-track flex transition-transform duration-300 ease-out">
+                            <!-- Card 1 -->
+                            <div class="faq-carousel-card flex-shrink-0 px-4">
+                                <div class="p-6 bg-primary-bg rounded-xl shadow-lg border border-secondary-bg h-full">
+                                    <h3 class="text-accent-red mb-2">How do I sign up?</h3>
+                                    <p class="text-secondary-text">Sign up via PushPress—first, 1st session
+                                        is free! At arrival, you'll sign waiver, we'll help you wrap your hands, and let you know
+                                        what to expect. Arrive 15-20
+                                        minutes early if it is your 1st time.</p>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="faq-carousel-card flex-shrink-0 px-4">
+                                <div class="p-6 bg-primary-bg rounded-xl shadow-lg border border-secondary-bg h-full">
+                                    <h3 class="text-accent-red mb-2">What do I need to bring to a
+                                        training session?</h3>
+                                    <p class="text-secondary-text">Bring your own hand wraps and gloves. We'll have
+                                        gloves/wraps to borrow & for purchase.</p>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="faq-carousel-card flex-shrink-0 px-4">
+                                <div class="p-6 bg-primary-bg rounded-xl shadow-lg border border-secondary-bg h-full">
+                                    <h3 class="text-accent-red mb-2">Are the classes suitable for
+                                        beginners?</h3>
+                                    <p class="text-secondary-text">All of our sessions, with the exception of sparring, are
+                                        open to beginners and first-time boxers. Boxing University Gym is a welcoming place for
+                                        boxers of all skill and fitness levels.</p>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="faq-carousel-card flex-shrink-0 px-4">
+                                <div class="p-6 bg-primary-bg rounded-xl shadow-lg border border-secondary-bg h-full">
+                                    <h3 class="text-accent-red mb-2">When are payments due?</h3>
+                                    <p class="text-secondary-text">Monthly payments are due the 5th of each month. Privates
+                                        and individual classes are due at time of session.</p>
+                                </div>
+                            </div>
+                            <!-- Card 5 -->
+                            <div class="faq-carousel-card flex-shrink-0 px-4">
+                                <div class="p-6 bg-primary-bg rounded-xl shadow-lg border border-secondary-bg h-full">
+                                    <h3 class="text-accent-red mb-2">Do I need to get hit?</h3>
+                                    <p class="text-secondary-text">No.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-6 bg-primary-bg rounded-xl shadow-lg border border-secondary-bg">
-                        <h3 class="text-accent-red mb-2">What do I need to bring to a
-                            training session?</h3>
-                        <p class="text-secondary-text">Bring your own hand wraps and gloves. We'll have
-                            gloves/wraps to borrow & for purchase.</p>
-                    </div>
-                    <div class="p-6 bg-primary-bg rounded-xl shadow-lg border border-secondary-bg">
-                        <h3 class="text-accent-red mb-2">Are the classes suitable for
-                            beginners?</h3>
-                        <p class="text-secondary-text">All of our sessions, with the exception of sparring, are
-                            open to beginners and first-time boxers. Boxing University Gym is a welcoming place for
-                            boxers of all skill and fitness levels.</p>
-                    </div>
-                    <div class="p-6 bg-primary-bg rounded-xl shadow-lg border border-secondary-bg">
-                        <h3 class="text-accent-red mb-2">When are payments due?</h3>
-                        <p class="text-secondary-text">Monthly payments are due the 5th of each month. Privates
-                            and individual classes are due at time of session.</p>
+
+                    <!-- Navigation Arrows (Desktop) -->
+                    <button class="faq-carousel-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 bg-accent-red hover:bg-white text-white hover:text-accent-red w-12 h-12 rounded-full flex items-center justify-center transition-all shadow-lg z-10 group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="faq-carousel-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 bg-accent-red hover:bg-white text-white hover:text-accent-red w-12 h-12 rounded-full flex items-center justify-center transition-all shadow-lg z-10 group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+
+                    <!-- Dot Indicators -->
+                    <div class="faq-carousel-dots flex justify-center gap-2 mt-6">
+                        <button class="faq-dot w-2 h-2 rounded-full bg-secondary-text hover:bg-accent-red transition-colors" data-index="0"></button>
+                        <button class="faq-dot w-2 h-2 rounded-full bg-secondary-text hover:bg-accent-red transition-colors" data-index="1"></button>
+                        <button class="faq-dot w-2 h-2 rounded-full bg-secondary-text hover:bg-accent-red transition-colors" data-index="2"></button>
+                        <button class="faq-dot w-2 h-2 rounded-full bg-secondary-text hover:bg-accent-red transition-colors" data-index="3"></button>
+                        <button class="faq-dot w-2 h-2 rounded-full bg-secondary-text hover:bg-accent-red transition-colors" data-index="4"></button>
                     </div>
                 </div>
             </div>
