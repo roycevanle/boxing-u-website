@@ -25,11 +25,11 @@
         <!-- INDICATOR OF HOW FAR BACK I NEED TO REDO-->
         <!-- Hero section -->
         <section
-            class="relative flex flex-col md:flex-row min-h-dvh w-full items-center justify-center p-4 gap-4 md:bg-secondary-bg">
+            class="relative flex flex-col md:flex-row min-h-screen w-full items-center justify-center p-4 gap-4 md:bg-secondary-bg">
             <div class="w-full max-w-480 flex flex-col md:flex-row gap-4">
                 <!-- Left Side -->
                 <div
-                    class="hero-col flex justify-end my-10 min-h-[90dvh] md:flex-[1.5] md:justify-between md:min-h-275 p-6 custom-poly md:[clip-path:none] md:aspect-auto">
+                    class="hero-col flex justify-end my-0 md:my-10 min-h-screen md:flex-1 md:justify-between md:min-h-275 p-6 custom-poly md:[clip-path:none] md:aspect-auto">
                     <div>
                         <h1 class="hidden md:block navbar-header text-xl md:text-6xl text-accent-red font-bold">
                             Boxing University
@@ -65,8 +65,8 @@
                         </div>
                     </div>
                     <!-- Learn More Button -->
-                    <a href="#pricing"
-                        class="relative w-50 text-center grow-0 py-1.5 font-semibold text-lg overflow-hidden rounded-full bg-accent-red hover:bg-white group transition-all">
+                    <a href="#training"
+                        class="hidden md:block relative w-50 text-center grow-0 py-1.5 font-semibold text-lg overflow-hidden rounded-full bg-accent-red hover:bg-white group transition-all">
                         <span
                             class="absolute inset-0 border-0 group-hover:border-25 ease-linear duration-100 transition-all border-white rounded-full"></span>
                         <span
@@ -76,15 +76,15 @@
 
                     <!-- Mobile Hero Section -->
                     <div class="md:hidden p-4">
-                        <p class="w-50 min-w-20 pl-5 text-sm">
+                        <!-- <p class="w-50 min-w-20 text-sm">
                             Explore your potential where hardwork starts with a 1-2.
-                        </p>
-                        <h1 class="title1 text-2xl font-bold text-accent-red">
-                            Boxing
+                        </p> -->
+                        <h1 class="titleMobile font-bold">
+                            Boxing University
                         </h1>
-                        <h1 class="title1 text-2xl font-bold text-accent-red mt-2">
+                        <!-- <h1 class="titleMobile font-bold text-accent-red mt-2">
                             University
-                        </h1>
+                        </h1> -->
                     </div>
                 </div>
 
@@ -100,7 +100,7 @@
                     <div class="relative z-10 flex justify-center p-6">
                         <!-- Desktop navigation links -->
                         <nav class="flex flex-row space-x-6">
-                            <a href="#pricing"
+                            <a href="#training"
                                 class="navbar-header text-text-white hover:text-accent-red transition-colors">Pricing</a>
                             <a href="#faq"
                                 class="navbar-header text-text-white hover:text-accent-red transition-colors">FAQ</a>
@@ -115,7 +115,7 @@
     <!-- Main content container -->
     <main>
         <!-- Services section with cards for different offerings -->
-        <section id="pricing" class="py-16 md:py-24 md:bg-primary-bg">
+        <section id="training" class="py-8 md:py-24 md:bg-primary-bg">
             <div class="container mx-auto px-4 md:px-8">
                 <h2 class="text-3xl md:text-4xl text-center mb-12 text-accent-red">
                     Our Training
@@ -354,7 +354,7 @@
         </section>
 
         <!-- About/Stats Section -->
-        <section id="faq" class="py-16 md:py-24 md:bg-secondary-bg">
+        <section id="faq" class="py-8 md:py-24 md:bg-secondary-bg">
             <div class="container mx-auto px-4 md:px-8">
                 <h2 class="text-3xl md:text-4xl text-center mb-12 text-accent-red">
                     Frequently Asked Questions

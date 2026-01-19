@@ -134,6 +134,7 @@ body {
   background-blend-mode: multiply; /* Or 'overlay' / 'darken' */
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 30% center;
 
   /* REVERT ON DESKTOP (md breakpoint) */
   @media (min-width: 768px) {
@@ -156,13 +157,12 @@ body {
   @apply p-3 font-bartle text-accent-red;
 } */
 
-.title {
+.titleMobile {
   height: 5%;
   width: 95%;
-  z-index: 50;
-  font-size: clamp(.5rem, 2vw + 1.5rem, 2rem); /* min val, preferred val, max val */
+  /* font-size: clamp(.5rem, 1vw + 1.5rem, 2rem); min val, preferred val, max val */
   /* background-color:rgba(0, 0, 0, 0.5); */
-  @apply p-3 font-bartle text-accent-red pl-5;
+  @apply font-bartle text-2xl text-accent-red tracking-wide leading-8 z-50 pb-4;
 }
 
 /* Style for the mobile menu transition */
