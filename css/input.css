@@ -246,3 +246,138 @@ body {
     @apply w-10 h-10;
   }
 }
+
+/* CYBERPUNK ANIMATION - Mobile Only  */
+/* Only show animation on mobile */
+.cyberpunk-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@media (min-width: 768px) {
+  .cyberpunk-animation {
+    display: none;
+  }
+}
+
+.circuit-line {
+  position: absolute;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--color-accent-red) 50%, 
+    transparent 100%);
+  opacity: 0;
+  animation: pulseLine 3s ease-in-out infinite;
+}
+
+.circuit-dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--color-accent-red);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--color-accent-red), 
+              0 0 12px var(--color-accent-red);
+  opacity: 0;
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+.corner-bracket {
+  position: absolute;
+  border: 1px solid var(--color-accent-red);
+  opacity: 0.6;
+  animation: fadeGlow 2s ease-in-out infinite;
+}
+
+.bracket-tl {
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.bracket-tr {
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.scan-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--color-accent-red) 50%, 
+    transparent 100%);
+  opacity: 0.3;
+  animation: scanDown 4s linear infinite;
+}
+
+@keyframes pulseLine {
+  0%, 100% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes fadeGlow {
+  0%, 100% {
+    opacity: 0.3;
+    box-shadow: 0 0 5px var(--color-accent-red);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 15px var(--color-accent-red);
+  }
+}
+
+@keyframes scanDown {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.circuit-line:nth-child(1) { animation-delay: 0s; }
+.circuit-line:nth-child(2) { animation-delay: 0.5s; }
+.circuit-line:nth-child(3) { animation-delay: 1s; }
+.circuit-line:nth-child(4) { animation-delay: 1.5s; }
+
+.circuit-dot:nth-child(1) { animation-delay: 0.2s; }
+.circuit-dot:nth-child(2) { animation-delay: 0.7s; }
+.circuit-dot:nth-child(3) { animation-delay: 1.2s; }
+.circuit-dot:nth-child(4) { animation-delay: 1.7s; }

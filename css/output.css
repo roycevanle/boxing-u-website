@@ -260,12 +260,6 @@
   .my-0 {
     margin-block: calc(var(--spacing) * 0);
   }
-  .my-10 {
-    margin-block: calc(var(--spacing) * 10);
-  }
-  .mt-0 {
-    margin-top: calc(var(--spacing) * 0);
-  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -347,11 +341,20 @@
   .h-full {
     height: 100%;
   }
-  .min-h-\[90dvh\] {
-    min-height: 90dvh;
+  .min-h-\[70vh\] {
+    min-height: 70vh;
   }
-  .min-h-dvh {
-    min-height: 100dvh;
+  .min-h-\[75vh\] {
+    min-height: 75vh;
+  }
+  .min-h-\[80vh\] {
+    min-height: 80vh;
+  }
+  .min-h-\[90vh\] {
+    min-height: 90vh;
+  }
+  .min-h-\[95vh\] {
+    min-height: 95vh;
   }
   .min-h-screen {
     min-height: 100vh;
@@ -810,6 +813,11 @@
       min-height: calc(var(--spacing) * 275);
     }
   }
+  .md\:min-h-screen {
+    @media (width >= 48rem) {
+      min-height: 100vh;
+    }
+  }
   .md\:w-10 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 10);
@@ -818,11 +826,6 @@
   .md\:flex-1 {
     @media (width >= 48rem) {
       flex: 1;
-    }
-  }
-  .md\:flex-\[1\.5\] {
-    @media (width >= 48rem) {
-      flex: 1.5;
     }
   }
   .md\:-translate-x-12 {
@@ -1128,6 +1131,134 @@ body {
     height: calc(var(--spacing) * 10);
     width: calc(var(--spacing) * 10);
   }
+}
+.cyberpunk-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+@media (min-width: 768px) {
+  .cyberpunk-animation {
+    display: none;
+  }
+}
+.circuit-line {
+  position: absolute;
+  background: linear-gradient(90deg, transparent 0%, var(--color-accent-red) 50%, transparent 100%);
+  opacity: 0;
+  animation: pulseLine 3s ease-in-out infinite;
+}
+.circuit-dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--color-accent-red);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--color-accent-red), 0 0 12px var(--color-accent-red);
+  opacity: 0;
+  animation: pulseDot 2s ease-in-out infinite;
+}
+.corner-bracket {
+  position: absolute;
+  border: 1px solid var(--color-accent-red);
+  opacity: 0.6;
+  animation: fadeGlow 2s ease-in-out infinite;
+}
+.bracket-tl {
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  border-right: none;
+  border-bottom: none;
+}
+.bracket-tr {
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-left: none;
+  border-bottom: none;
+}
+.scan-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--color-accent-red) 50%, transparent 100%);
+  opacity: 0.3;
+  animation: scanDown 4s linear infinite;
+}
+@keyframes pulseLine {
+  0%, 100% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scaleX(1);
+  }
+}
+@keyframes pulseDot {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+@keyframes fadeGlow {
+  0%, 100% {
+    opacity: 0.3;
+    box-shadow: 0 0 5px var(--color-accent-red);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 15px var(--color-accent-red);
+  }
+}
+@keyframes scanDown {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+.circuit-line:nth-child(1) {
+  animation-delay: 0s;
+}
+.circuit-line:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.circuit-line:nth-child(3) {
+  animation-delay: 1s;
+}
+.circuit-line:nth-child(4) {
+  animation-delay: 1.5s;
+}
+.circuit-dot:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.circuit-dot:nth-child(2) {
+  animation-delay: 0.7s;
+}
+.circuit-dot:nth-child(3) {
+  animation-delay: 1.2s;
+}
+.circuit-dot:nth-child(4) {
+  animation-delay: 1.7s;
 }
 @property --tw-translate-x {
   syntax: "*";
