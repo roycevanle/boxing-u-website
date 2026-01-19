@@ -26,28 +26,59 @@
         <!-- Hero section -->
         <section
             class="relative flex flex-col md:flex-row min-h-screen w-full items-center justify-center p-4 gap-4 md:bg-secondary-bg">
+            <!-- ADD THIS WAVE ANIMATION -->
+            <div class="wave-animation">
+                <!-- <div class="wave-bracket"></div>
+
+                <div class="grid-line grid-h-1"></div>
+                <div class="grid-line grid-h-2"></div>
+                <div class="grid-line grid-h-3"></div>
+                <div class="grid-line grid-v-1"></div>
+                <div class="grid-line grid-v-2"></div> -->
+
+                <svg width="150" height="100" viewBox="0 0 150 100" preserveAspectRatio="none">
+                    <!-- Wave 1 (main) -->
+                    <!-- <path class="wave-path wave-path-1" 
+                    d="M 20 50 Q 32.5 30, 45 50 T 70 50 T 95 50 T 120 50" 
+                    stroke-dasharray="10 5"/> -->
+
+                    <!-- Wave 2 (offset) -->
+                    <!-- Wave 2 (offset - inverted) -->
+                    <path class="wave-path wave-path-2" d="M 20 55 Q 32.5 75, 45 55 T 70 55 T 95 55"
+                        stroke-dasharray="8 4" />
+
+                    <!-- Wave 3 (subtle) -->
+                    <path class="wave-path wave-path-3" d="M 20 60 Q 32.5 40, 45 60 T 70 60 T 95 60"
+                        stroke-dasharray="6 3" />
+
+                    <!-- <circle class="wave-dot" cx="-10" cy="80" r="2" />
+                    <circle class="wave-dot" cx="-10" cy="80" r="2" />
+                    <circle class="wave-dot" cx="-10" cy="80" r="2" /> -->
+                </svg>
+            </div>
+
             <div class="w-full max-w-480 flex flex-col md:flex-row gap-4">
                 <!-- Left Side -->
                 <div
                     class="hero-col flex justify-end my-0 md:my-10 min-h-[90vh] md:flex-1 md:justify-between md:min-h-275 p-6 custom-poly md:[clip-path:none] md:aspect-auto">
-                        <!-- ADD THIS ANIMATION CONTAINER -->
+                    <!-- ADD THIS ANIMATION CONTAINER -->
                     <div class="cyberpunk-animation">
                         <div class="corner-bracket bracket-tl"></div>
-                        
+
                         <div class="circuit-line" style="top: 15%; left: 0; width: 35%; height: 1px;"></div>
                         <div class="circuit-line" style="top: 25%; left: 0; width: 25%; height: 1px;"></div>
                         <div class="circuit-line" style="top: 35%; right: 0; width: 30%; height: 1px;"></div>
                         <div class="circuit-line" style="top: 45%; left: 0; width: 20%; height: 1px;"></div>
-                        
+
                         <div class="circuit-line" style="left: 15%; top: 0; width: 1px; height: 40%;"></div>
                         <div class="circuit-line" style="right: 20%; top: 0; width: 1px; height: 35%;"></div>
-                        
+
                         <div class="circuit-dot" style="top: 15%; left: 15%;"></div>
                         <div class="circuit-dot" style="top: 25%; left: 25%;"></div>
                         <div class="circuit-dot" style="top: 35%; right: 20%;"></div>
                         <div class="circuit-dot" style="top: 45%; left: 20%;"></div>
                         <div class="circuit-dot" style="top: 35%; right: 30%;"></div>
-                        
+
                         <div class="scan-line"></div>
                     </div>
                     <div>
@@ -127,6 +158,32 @@
                             <a href="#contact"
                                 class="navbar-header text-text-white hover:text-accent-red transition-colors">Contact</a>
                         </nav>
+                    </div>
+                </div>
+                <!-- ADD THIS BRAILLE ANIMATION -->
+                <div class="braille-animation">
+                    <!-- <div class="corner-line corner-line-h"></div>
+                    <div class="corner-line corner-line-v"></div> -->
+                    <div class="braille-group" style="top: 0; left: 0;">
+                        <div class="braille-dot dot-3"></div>
+                        <div class="braille-dot dot-6"></div>
+                    </div>
+                    <div class="braille-group" style="top: 0; left: 35px;">
+                        <div class="braille-dot dot-3"></div>
+                        <div class="braille-dot dot-6"></div>
+                    </div>
+                    <div class="braille-group" style="top: 0; left: 70px;">
+                        <div class="braille-dot dot-1"></div>
+                        <div class="braille-dot dot-2"></div>
+                        <div class="braille-dot dot-3"></div>
+                    </div>
+
+                    <div class="braille-group" style="bottom: 0; left: 0;">
+                        <div class="braille-dot dot-1"></div>
+                    </div>
+
+                    <div class="braille-group" style="bottom: 0; left: 35px;">
+                        <div class="braille-dot dot-1"></div>
                     </div>
                 </div>
         </section>

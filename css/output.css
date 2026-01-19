@@ -215,9 +215,6 @@
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
-  .top-1 {
-    top: calc(var(--spacing) * 1);
-  }
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
@@ -302,9 +299,6 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .custom-poly {
     width: 100%;
     aspect-ratio: 150 / 200;
@@ -341,20 +335,8 @@
   .h-full {
     height: 100%;
   }
-  .min-h-\[70vh\] {
-    min-height: 70vh;
-  }
-  .min-h-\[75vh\] {
-    min-height: 75vh;
-  }
-  .min-h-\[80vh\] {
-    min-height: 80vh;
-  }
   .min-h-\[90vh\] {
     min-height: 90vh;
-  }
-  .min-h-\[95vh\] {
-    min-height: 95vh;
   }
   .min-h-screen {
     min-height: 100vh;
@@ -407,20 +389,11 @@
   .flex-none {
     flex: none;
   }
-  .flex-shrink {
-    flex-shrink: 1;
-  }
   .flex-shrink-0 {
     flex-shrink: 0;
   }
-  .flex-grow {
-    flex-grow: 1;
-  }
   .grow-0 {
     flex-grow: 0;
-  }
-  .border-collapse {
-    border-collapse: collapse;
   }
   .-translate-x-4 {
     --tw-translate-x: calc(var(--spacing) * -4);
@@ -428,10 +401,6 @@
   }
   .translate-x-4 {
     --tw-translate-x: calc(var(--spacing) * 4);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .-translate-y-1 {
-    --tw-translate-y: calc(var(--spacing) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-1\/2 {
@@ -582,9 +551,6 @@
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
-  .py-1 {
-    padding-block: calc(var(--spacing) * 1);
-  }
   .py-1\.5 {
     padding-block: calc(var(--spacing) * 1.5);
   }
@@ -674,15 +640,6 @@
   .ring {
     --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
-  .transition {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
   .transition-all {
     transition-property: all;
@@ -811,11 +768,6 @@
   .md\:min-h-275 {
     @media (width >= 48rem) {
       min-height: calc(var(--spacing) * 275);
-    }
-  }
-  .md\:min-h-screen {
-    @media (width >= 48rem) {
-      min-height: 100vh;
     }
   }
   .md\:w-10 {
@@ -1260,6 +1212,270 @@ body {
 .circuit-dot:nth-child(4) {
   animation-delay: 1.7s;
 }
+.braille-animation {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 120px;
+  height: 150px;
+  pointer-events: none;
+  z-index: 5;
+}
+@media (max-width: 767px) {
+  .braille-animation {
+    width: 80px;
+    height: 100px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .braille-animation {
+    display: none;
+  }
+}
+.braille-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--color-secondary-text);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--color-secondary-text), 0 0 12px var(--color-secondary-text);
+  opacity: 0;
+  animation: braillePulse 3s ease-in-out infinite;
+}
+@media (max-width: 767px) {
+  .braille-dot {
+    width: 4px;
+    height: 4px;
+  }
+}
+.braille-group {
+  position: absolute;
+  width: 20px;
+  height: 50px;
+}
+.dot-1 {
+  top: 0;
+  left: 0;
+}
+.dot-2 {
+  top: 15px;
+  left: 0;
+}
+.dot-3 {
+  top: 30px;
+  left: 0;
+}
+.dot-4 {
+  top: 0;
+  right: 0;
+}
+.dot-5 {
+  top: 15px;
+  right: 0;
+}
+.dot-6 {
+  top: 30px;
+  right: 0;
+}
+.braille-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.braille-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.braille-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.braille-dot:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.braille-dot:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.braille-dot:nth-child(6) {
+  animation-delay: 1s;
+}
+.braille-group:nth-child(1) .braille-dot {
+  animation-delay: 0s;
+}
+.braille-group:nth-child(2) .braille-dot {
+  animation-delay: 0.3s;
+}
+.braille-group:nth-child(3) .braille-dot {
+  animation-delay: 0.6s;
+}
+@keyframes braillePulse {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+.corner-line {
+  position: absolute;
+  background: var(--color-secondary-text);
+  opacity: 0.4;
+}
+.corner-line-h {
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 1px;
+  animation: lineGlow 2s ease-in-out infinite;
+}
+.corner-line-v {
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  height: 40px;
+  animation: lineGlow 2s ease-in-out infinite 0.5s;
+}
+@keyframes lineGlow {
+  0%, 100% {
+    opacity: 0.2;
+    box-shadow: 0 0 2px var(--color-secondary-text);
+  }
+  50% {
+    opacity: 0.6;
+    box-shadow: 0 0 8px var(--color-secondary-text);
+  }
+}
+.wave-animation {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 150px;
+  height: 100px;
+  pointer-events: none;
+  z-index: -1;
+  overflow: visible;
+}
+@media (max-width: 767px) {
+  .wave-animation {
+    width: 100px;
+    height: 70px;
+    top: 10px;
+    left: 10px;
+  }
+}
+.wave-path {
+  fill: none;
+  stroke: var(--color-secondary-text);
+  stroke-width: 1.5;
+  opacity: 0.6;
+  filter: drop-shadow(0 0 3px var(--color-secondary-text));
+}
+.wave-path-1 {
+  animation: waveFlow 4s ease-in-out infinite;
+}
+.wave-path-2 {
+  animation: waveFlow 4s ease-in-out infinite 0.5s;
+  opacity: 0.4;
+}
+.wave-path-3 {
+  animation: waveFlow 4s ease-in-out infinite 1s;
+  opacity: 0.3;
+}
+@keyframes waveFlow {
+  0%, 100% {
+    stroke-dashoffset: 0;
+    opacity: 0.6;
+  }
+  50% {
+    stroke-dashoffset: -100;
+    opacity: 0.3;
+  }
+}
+.wave-dot {
+  fill: var(--color-secondary-text);
+  opacity: 0;
+  animation: dotTravel 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 4px var(--color-secondary-text));
+}
+.wave-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.wave-dot:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.wave-dot:nth-child(3) {
+  animation-delay: 1.2s;
+}
+@keyframes dotTravel {
+  0% {
+    opacity: 0;
+    transform: translateX(0) translateY(0) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(75px) translateY(-15px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(150px) translateY(0) scale(0.5);
+  }
+}
+.wave-bracket {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-left: 1px solid var(--color-secondary-text);
+  border-top: 1px solid var(--color-secondary-text);
+  opacity: 0.5;
+  animation: bracketGlow 3s ease-in-out infinite;
+}
+@keyframes bracketGlow {
+  0%, 100% {
+    opacity: 0.3;
+    box-shadow: 0 0 3px var(--color-secondary-text);
+  }
+  50% {
+    opacity: 0.6;
+    box-shadow: 0 0 8px var(--color-secondary-text);
+  }
+}
+.grid-line {
+  position: absolute;
+  background: var(--color-secondary-text);
+  opacity: 0.15;
+}
+.grid-h-1 {
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+.grid-h-2 {
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+.grid-h-3 {
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+.grid-v-1 {
+  top: 0;
+  left: 40px;
+  width: 1px;
+  height: 100%;
+}
+.grid-v-2 {
+  top: 0;
+  left: 80px;
+  width: 1px;
+  height: 100%;
+}
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;
@@ -1383,11 +1599,6 @@ body {
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -1445,7 +1656,6 @@ body {
       --tw-ring-offset-shadow: 0 0 #0000;
       --tw-font-weight: initial;
       --tw-tracking: initial;
-      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
       --tw-leading: initial;
