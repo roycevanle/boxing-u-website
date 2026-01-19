@@ -159,37 +159,51 @@
                                 style="background-color: var(--color-secondary-bg);">
                                 <div class="flex justify-between items-start mb-4">
                                     <h3 class="text-xl md:text-2xl font-semibold">
-                                        Private Sessions Details
+                                        Private/Group Sessions Details
                                     </h3>
                                     <button onclick="toggleReveal(this)"
                                         class="text-2xl font-bold hover:opacity-70 transition-opacity"
                                         style="color: var(--color-accent-red);">
-                                        ×
+                                        X
                                     </button>
                                 </div>
                                 <div class="overflow-y-auto flex-1">
-                                    <h4 class="font-semibold mb-2" style="color: var(--color-accent-red);">What's
-                                        Included:</h4>
-                                    <ul class="mb-4 space-y-2" style="color: var(--color-secondary-text);">
-                                        <li>• Personalized training program tailored to your goals</li>
-                                        <li>• One-on-one attention from experienced coaches</li>
-                                        <li>• Technique refinement and form correction</li>
-                                        <li>• Flexible scheduling to fit your lifestyle</li>
-                                        <li>• Progress tracking and performance metrics</li>
+                                    <h4 class="font-semibold mb-2 underline">Class Schedule:</h4>
+                                    <h5 class="font-bold mb-2">mon/wed/fri</h5>
+                                    <ul class="mb-4 space-y-2 text-secondary-text">
+                                        <li>6:30-7:30am Adult</li>
+                                        <li>9:00-11:00am Adult</li>
+                                        <li>3:30-4:30pm Adult</li>
+                                        <li>5:00-6:00pm Youth/Beginners</li>
+                                        <li>6:00-7:00pm Kids Boxing Fundamentals</li>
+                                        <li>7:00-8:00pm Adult/Advanced</li>
                                     </ul>
-                                    <h4 class="font-semibold mb-2" style="color: var(--color-accent-red);">Pricing:</h4>
-                                    <p class="mb-4" style="color: var(--color-secondary-text);">
-                                        Single Session: $75<br>
-                                        5-Pack: $350<br>
-                                        10-Pack: $650
-                                    </p>
-                                    <button
+                                    <h5 class="font-bold mb-2">tues/thurs</h5>
+                                    <ul class="mb-4 space-y-2 text-secondary-text">
+                                        <li>3:30-4:30pm Adult</li>
+                                        <li>5:00-6:00pm Youth/Beginners</li>
+                                        <li>7:00-8:00pm Adult/Advanced</li>
+                                    </ul>
+                                    <h4 class="font-semibold mb-2 underline text-accent-red">Pricing
+                                        (excluding tax):</h4>
+                                    <ul class="mb-4 space-y-2 text-secondary-text">
+                                        <li>• Private 1-Hour: $80</li>
+                                        <li>• Private 30-Minute: $50</li>
+                                        <li>• Private 8-Pack (1-Hour): $520</li>
+                                        <li>• Private 8-Pack (30-Minute): $320</li>
+                                        <li>• Group Class (monthly, Adult): $180</li>
+                                        <li>• Group Class (monthly, Youth): $160</li>
+                                        <li>• Group Class (3-month pledge, Adult): $170</li>
+                                        <li>• Group Class (3-month pledge, Youth): $160</li>
+                                        <li>• Talk to us about military/hardship discounts</li>
+                                    </ul>
+                                    <!-- <button
                                         class="w-full px-5 py-3 font-semibold text-sm border rounded-full transition-colors"
                                         style="color: var(--color-accent-red); border-color: var(--color-accent-red);"
                                         onmouseover="this.style.backgroundColor='var(--color-accent-red)'; this.style.color='var(--color-text-white)';"
                                         onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--color-accent-red)';">
                                         Book Now
-                                    </button>
+                                    </button> -->
                                 </div>
                             </div>
                             <!-- <a href="#"
@@ -206,6 +220,7 @@
                         </div>
                         <!-- Dark overlay -->
                         <div class="absolute inset-0 bg-secondary-bg/90 z-0"></div>
+                        <!-- Main card content -->
                         <div class="relative mt-auto z-10 p-6 md:p-8 flex flex-col items-start h-full">
                             <!-- Lucide icon for users -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -224,10 +239,55 @@
                                 become part of a
                                 supportive and motivating community.
                             </p>
-                            <a href="#"
-                                class="px-5 py-2 font-semibold text-sm text-accent-red border border-accent-red rounded-full hover:bg-accent-red hover:text-text-white transition-colors">
+                            <button onclick="toggleReveal(this)"
+                                class="mt-auto px-5 py-2 font-semibold text-sm border rounded-full transition-colors relative z-10"
+                                style="color: var(--color-accent-red); border-color: var(--color-accent-red);"
+                                onmouseover="this.style.backgroundColor='var(--color-accent-red)'; this.style.color='var(--color-text-white)';"
+                                onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--color-accent-red)';">
                                 Learn More
-                            </a>
+                            </button>
+                            <!-- Reveal Card -->
+                            <div class="card-reveal rounded-xl p-6 md:p-8 flex flex-col"
+                                style="background-color: var(--color-secondary-bg);">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h3 class="text-xl md:text-2xl font-semibold">
+                                        Open Gym / Drop-Ins Details
+                                    </h3>
+                                    <button onclick="toggleReveal(this)"
+                                        class="text-2xl font-bold hover:opacity-70 transition-opacity"
+                                        style="color: var(--color-accent-red);">
+                                        X
+                                    </button>
+                                </div>
+                                <div class="overflow-y-auto flex-1">
+                                    <h4 class="font-semibold mb-2">Open Gym Schedule:</h4>
+                                    <h5 class="font-bold mb-2">mon/wed/fri</h5>
+                                    <ul class="mb-4 space-y-2 text-secondary-text">
+                                        <li>6:00-11:00am</li>
+                                        <li>3:30-8:30pm</li>
+                                    </ul>
+                                    <h5 class="font-bold mb-2">tues/thurs</h5>
+                                    <ul class="mb-4 space-y-2 text-secondary-text">
+                                        <li>3:30-8:30pm</li>
+                                    </ul>
+                                    <h4 class="font-semibold mb-2">Drop-In Schedule:</h4>
+                                    <h5 class="font-normal mb-2">Drop-in to any class according to times under "Private/Group Sessions"</h5>
+                                    <h4 class="font-semibold mb-2" style="color: var(--color-accent-red);">Pricing
+                                        (excluding tax):</h4>
+                                    <ul class="mb-4 space-y-2 text-secondary-text">
+                                        <li>• Open Gym (per month): $80</li>
+                                        <li>• Drop-In (per class): $25</li>
+                                        <li>• Talk to us about military/hardship discounts</li>
+                                    </ul>
+                                    <!-- <button
+                                        class="w-full px-5 py-3 font-semibold text-sm border rounded-full transition-colors"
+                                        style="color: var(--color-accent-red); border-color: var(--color-accent-red);"
+                                        onmouseover="this.style.backgroundColor='var(--color-accent-red)'; this.style.color='var(--color-text-white)';"
+                                        onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--color-accent-red)';">
+                                        Book Now
+                                    </button> -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- Events Card -->
@@ -260,13 +320,32 @@
                                 Step into the ring for our sparring nights, shows, and special events. Come connect with
                                 your boxing family.
                             </p>
-                            <a href="#"
-                                class="px-5 py-2 font-semibold text-sm text-accent-red border border-accent-red rounded-full hover:bg-accent-red hover:text-text-white transition-colors">
+                            <button onclick="toggleReveal(this)"
+                                class="mt-auto px-5 py-2 font-semibold text-sm border rounded-full transition-colors relative z-10"
+                                style="color: var(--color-accent-red); border-color: var(--color-accent-red);"
+                                onmouseover="this.style.backgroundColor='var(--color-accent-red)'; this.style.color='var(--color-text-white)';"
+                                onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--color-accent-red)';">
                                 Learn More
-                            </a>
+                            </button>
+                            <!-- Reveal Card -->
+                            <div class="card-reveal rounded-xl p-6 md:p-8 flex flex-col"
+                                style="background-color: var(--color-secondary-bg);">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h3 class="text-xl md:text-2xl font-semibold">
+                                        Private/Group Sessions Details
+                                    </h3>
+                                    <button onclick="toggleReveal(this)"
+                                        class="text-2xl font-bold hover:opacity-70 transition-opacity"
+                                        style="color: var(--color-accent-red);">
+                                        X
+                                    </button>
+                                </div>
+                                <div class="overflow-y-auto flex-1">
+                                    <h4 class="mb-2 text-text-light-gray">Events coming soon...</h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
         </section>
 
         <!-- About/Stats Section -->

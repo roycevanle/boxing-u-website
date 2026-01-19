@@ -7,6 +7,7 @@
   --color-secondary-text: #B8B8B8;    /* Muted text color (Medium Gray) */
   --color-accent-red: #E33A3A;        /* Vibrant action color (Red) */
   --color-text-white: #F0F0F0;        /* Main text color (Off-White) */
+  --color-text-light-gray: #D6D6D6;  /* Lighter text color for less emphasis (Light Gray) */
 }
 
 @layer base {
@@ -23,6 +24,14 @@
     font-family: "Work Sans", sans-serif;
     font-style: normal;
     @apply text-xl md:text-2xl font-bold tracking-tight;
+  }
+  h4 {
+    font-family: "Work Sans", sans-serif;
+    @apply font-semibold text-accent-red;
+  }
+  h5 {
+    font-family: "Work Sans", sans-serif;
+    @apply font-semibold text-text-light-gray;
   }
   a {
     font-family: "Work Sans", sans-serif;
