@@ -926,13 +926,31 @@
     font-weight: 400;
     font-style: normal;
   }
+  html {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
   body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('../imgs/greyGrid.jpg');
-    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: black;
+    z-index: -2;
+    pointer-events: none;
   }
   body::before {
     content: "";
@@ -944,10 +962,6 @@
     background-color: rgba(0, 0, 0, 0.45);
     z-index: -1;
     pointer-events: none;
-  }
-  html, body {
-    max-width: 100%;
-    overflow-x: hidden;
   }
 }
 @layer component {
